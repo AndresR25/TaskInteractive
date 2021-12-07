@@ -1,0 +1,27 @@
+
+<button (click) = "getTasks()">
+    Click to load the tasks
+</button>
+
+<div *ngFor = "let task of allTasks">
+    <div>
+        {{task.title}}
+    </div>
+    <form action="" (submit) = "taskInfo($event)" >
+        <input id="title" type="hidden" value="{{task.title}}">
+        <button type="submit" class="showInfo">
+            Show more
+        </button>
+    </form>
+</div>
+<div class="taskInfo">
+    <div>
+        Description: {{task2.description}}
+    </div>
+    <div>
+        Status: {{task2.completed}}
+    </div>
+</div>
+
+
+
